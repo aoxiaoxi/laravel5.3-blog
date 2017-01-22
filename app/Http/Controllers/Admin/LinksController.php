@@ -5,10 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\StoreLinkRequest;
 use App\Repositories\Eloquent\LinkRepositories;
 use Illuminate\Http\Request;
-
-use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\Validator;
-
 class LinksController extends PublicController
 {
     private $link;

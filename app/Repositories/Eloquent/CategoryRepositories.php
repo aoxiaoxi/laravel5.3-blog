@@ -38,4 +38,14 @@ class CategoryRepositories extends BaseRepositories
         }
         return $tmp;
     }
+
+    public function onelevelCate(){
+        $class=$this->model->where('cate_pid',0)->get()->toArray();
+        return $class;
+    }
+
+    public function getCateName($attribute,$value,$name){
+        $cateName = $this->model->where($attribute,$value)->value($name);
+        return $cateName;
+    }
 }
